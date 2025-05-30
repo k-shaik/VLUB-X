@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VLUB - Vulnerable Server</title>
+  <style>
+    body { font-family: Arial; margin: 0; background: #f0f0f0; }
+    nav { background: #333; color: white; padding: 10px; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; }
+    .container { padding: 20px; background: white; max-width: 600px; margin: 20px auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input[type="text"], input[type="password"] { width: 100%; padding: 8px; margin: 8px 0; }
+    input[type="submit"] { padding: 8px 16px; background: #007BFF; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/hello">XSS Test</a>
+    <a href="/login">Login</a>
+    <a href="/ping">Ping</a>
+    <a href="/hacked">Defaced Page</a>
+  </nav>
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

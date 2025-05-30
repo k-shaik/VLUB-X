@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Ping a Host (Command Injection)</h2>
+<form method="get">
+  Host: <input name="host"><br>
+  <input type="submit" value="Ping">
+</form>
+{% if result %}
+  <pre>{{ result }}</pre>
+{% endif %}
+{% endblock %}

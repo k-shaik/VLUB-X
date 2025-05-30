@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Login (Simulated SQL Injection)</h2>
+<form method="post">
+  Username: <input name="user"><br>
+  Password: <input name="pass"><br>
+  <input type="submit" value="Login">
+</form>
+{% if query %}
+  <p>Executed Query:</p>
+  <code>{{ query }}</code>
+{% endif %}
+{% endblock %}

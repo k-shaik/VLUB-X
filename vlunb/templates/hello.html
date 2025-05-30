@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Say Hello (XSS Vulnerable)</h2>
+<form action="/hello" method="get">
+  Name: <input name="name" type="text" />
+  <input type="submit" value="Greet" />
+</form>
+{% if name %}
+  <p>Output: Hello {{name|safe}}</p>
+{% endif %}
+{% endblock %}
